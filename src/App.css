@@ -11,6 +11,7 @@ body{
   background-image: url(components/Navbar/images/bgblur.png);
   background-repeat: no-repeat;
   background-size: cover;
+  overflow-x: hidden;
 }
 
 .App{

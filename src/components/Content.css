@@ -10,12 +10,17 @@
 
 .left-right{
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   margin-top: 9rem;
+}
+
+.right{
+  margin-right: 80px;
 }
 
 .text-1 {
   text-align: left;
+  margin-left: 80px;
 }
 
 .important-text{
@@ -25,43 +30,11 @@
   font-style: normal;
   font-weight: 700;
   line-height: 130px;
-  margin-top: 30px;
+  
 }
 
 .important-text a{
   color: var(--primary);
-}
-
-.card-style {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  justify-items: center;
-  gap: 20px;
-}
-  
-.slider {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  width: 100%;
-}
-  
-.card {
-  position: relative;
-  width: 100%;
-  max-width: 495px;
-  background-color: #3D2942;
-  padding: 32px;
-  margin: 21px;
-  box-sizing: border-box;
-}
-  
-.card img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
 }
 
 .buttons{
@@ -125,6 +98,7 @@
   background-repeat: no-repeat;
 }
 
+
 .nft-img-text{
   width: 100%;
   height: 142px;
@@ -162,7 +136,7 @@
   width: 205px;
   height: 72px;
   background: var(--primary-color, #FFCE4E);
-  /* backdrop-filter: blur(22.5px); */
+  backdrop-filter: blur(22.5px);
   border: none;
   color: #16091B;
   font-family: Work Sans;
@@ -211,6 +185,46 @@
   font-weight: 700;
   line-height: normal;
 }
+
+.artworks-auctions-creators-center{
+  display: flex;
+  justify-content: flex-start;
+}
+
+.artworks-auctions-creators{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  margin-top: 121px;
+}
+
+/* Content.css */
+
+
+/* ... modal-slider styles ... */
+
+
+.artworks-auctions-creators p{
+  color: #F5FBF2;
+  font-family: Oxanium;
+  font-size: 62px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.artworks-auctions-creators label{
+  color: #9B9E9A;
+  font-family: Work Sans;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 35.452px; /* 147.717% */
+}
+
+
+
 /* Responsive Styles */
 
 @media screen and (max-width: 1430px) {
@@ -227,8 +241,9 @@
 }
 
 @media screen and (max-width: 768px) {
-  .card {
-    margin: 10px;
+  .artworks-auctions-creators{
+    margin: 0;
+    padding: 0;
   }
 
   .left-right{
@@ -317,6 +332,7 @@
     text-align: center;
     flex-direction: column;
     justify-content: center;
+    margin: 0;
   }
 
   .img-right{
@@ -364,11 +380,42 @@
   .down{
     font-size: 22px;
   }
+
+  .artworks-auctions-creators{
+    justify-content: space-around;
+    margin-top: 31rem;
+  }
+
+  .artworks-auctions-creators p{
+    font-size: 36px;
+  }
+  
+  .artworks-auctions-creators label{
+    font-size: 16px;
+  }
+
+  .text-1{
+    margin: 0;
+  }
+
+  .important-text{
+    margin-top: 170px;
+  }
+  
+  .right{
+    margin-right: 0;
+    margin-top: -32rem;
+  }
+  
 }
   
 @media (max-width: 480px) {
-  .card-style {
-    grid-template-columns: 1fr;
+  .text-1{
+    margin: 0;
+  }
+  
+  .right{
+    margin-right: 0;
   }
 }
   
