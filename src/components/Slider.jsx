@@ -140,7 +140,7 @@ function Slider() {
                         </div>
                     ))}
                 </div>
-                <div className="buttons">
+                <div className="button-view-all">
                     <button className="view-all-button" onClick={toggleModal}>
                         View All
                     </button>

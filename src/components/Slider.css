@@ -9,6 +9,39 @@
     width: 100%;
 }
 
+.first-buttons{
+    display: flex;
+    justify-content: flex-end;
+    width: auto;
+}
+
+.fb-cont{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 42px;
+    width: 150px;
+}
+
+.prev-button,
+.next-button{
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    border: none;
+    background-color: #F5FBF2;
+    font-size: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.prev-button:hover,
+.next-button:hover{
+    filter: brightness(30%);
+    transition: 0.1s ease-in;
+}
+
 .card-style{
     display: grid;
     grid-gap: 50px;
@@ -126,11 +159,231 @@
     border-radius: none;
 }
 
+.button-view-all{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 84px;
+}
+
+.button-view-all button{
+    width: 257px;
+    height: 84px;
+    background: none;
+    color: #F5FBF2;
+    font-family: Work Sans;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 35.452px;
+    letter-spacing: 1.5px;
+    border: 1px solid var(--primary-color, #FFCE4E);
+    cursor: pointer;
+}
+
+.button-view-all button:hover{
+    color: #16091b;
+    background: #FFCE4E;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+.modal-content {
+    justify-content: center;
+    background-color: rgb(12, 1, 12);
+    width: 95%;
+    height: 95%;
+    padding: 20px;
+    overflow-y: auto;
+}
+  
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: 1px solid #FFCE4E;
+    padding: 10px 20px;
+    cursor: pointer;
+    color: #FFCE4E;
+    font-family: Work Sans;
+    font-style: normal;
+    font-weight: 400;
+    margin-top: 40px;
+    margin-right: 100px;
+}
+  
+.all-photos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(495px, 10%));
+    grid-gap: 20px;
+    justify-content: center;
+}
+
+.all-photos .card {
+    position: relative;
+    overflow: hidden;
+}
+  
+.all-photos .card img {
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+}
+
+/* Slider.css */
+
+/* ... Your existing styles ... */
+
+/* Modal Styles */
+/* .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-content {
+    background-color: white;
+    width: 95%;
+    height: 95%;
+    padding: 20px;
+    overflow-y: auto;
+  }
+  
+  .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .all-photos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 20px;
+  }
+  
+  .all-photos .card {
+    position: relative;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .all-photos .card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .all-photos .card .about-img {
+    padding: 10px;
+  }
+  
+  .all-photos .card .top-side {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .all-photos .card .idt-title,
+  .all-photos .card .idt-description {
+    margin: 0;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .all-photos .card .favorite {
+    display: flex;
+    align-items: center;
+  }
+  
+  .all-photos .card .icon {
+    font-size: 18px;
+    color: #ff5050;
+    cursor: pointer;
+  }
+  
+  .all-photos .card .fav-number {
+    margin: 0;
+    margin-left: 5px;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .all-photos .card .bottom-side {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .all-photos .card .paragraphs {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .all-photos .card .current-bid,
+  .all-photos .card .price {
+    margin: 0;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .all-photos .card button {
+    border: 1px solid #FDE8B3;
+    background: rgba(233, 215, 167, 0.10);
+    color: #FFF;
+    font-family: Work Sans;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 35.452px;
+    letter-spacing: 1.2px;
+    height: 80px;
+    margin-top: 28px;
+  }
+  
+  .slider-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .button-view-all {
+    margin-top: 20px;
+  }
+   */
+
 @media screen and (max-width: 1348px){
     .card-style{
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+    }
+
+    .first-buttons{
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 42px;
     }
 }
 
@@ -140,8 +393,6 @@
         flex-wrap: wrap;
         justify-content: center;
     }
-
-    
 }
 
 @media screen and (max-width: 480px){
@@ -179,5 +430,15 @@
     
     .idt-description{
         font-size: 14px;
+    }
+
+    .button-view-all button{
+        width: 187px;
+        height: 54px;
+        font-size: 18px;
+    }
+
+    .all-photos{
+        grid-template-columns: auto;
     }
 }

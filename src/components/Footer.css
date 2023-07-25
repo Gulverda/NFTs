@@ -173,6 +173,7 @@
 
 @media (max-width: 480px) {
     .two-side{
+        width: auto;
         display: grid;
     }
     

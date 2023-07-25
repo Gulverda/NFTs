@@ -136,7 +136,7 @@
   width: 205px;
   height: 72px;
   background: var(--primary-color, #FFCE4E);
-  backdrop-filter: blur(22.5px);
+  /* backdrop-filter: blur(22.5px); */
   border: none;
   color: #16091B;
   font-family: Work Sans;
