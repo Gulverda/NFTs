@@ -89,6 +89,10 @@ function Slider() {
 
     return (
         <div className="slider">
+            <div className="circle-and-title">
+                <div className="purple-circle"></div>
+                <p className="first-slider-title">Live Auctions</p>
+          </div>
             <div className="first-buttons">
                 <div className="fb-cont">
                     <button className="prev-button" aria-label="Previous Page" onClick={prevPhotos}>
@@ -111,7 +115,7 @@ function Slider() {
                                 <div className="top-side">
                                     <div className="left-side">
                                         <div className="ai-img">
-                                            <img src={aiimg} className="logo" alt="Logo" />
+                                            <img src={aiimg} className="logo1" alt="Logo" />
                                         </div>
                                         <div className="img-down-text">
                                             <p className="idt-title">{photo.title}</p>
@@ -159,6 +163,9 @@ function Slider() {
                                         <div className="about-img">
                                             <div className="top-side">
                                                 <div className="left-side">
+                                                    <div className="ai-img">
+                                                        <img src={aiimg} className="logo1" alt="Logo" />
+                                                    </div>
                                                     <div className="ai-img"></div>
                                                     <div className="img-down-text">
                                                         <p className="idt-title">{photo.title}</p>
