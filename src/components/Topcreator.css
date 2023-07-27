@@ -1,0 +1,130 @@
+.creator-img img{
+    width: 105px;
+    height: 105px;
+    border-radius: 50%;
+}
+
+.creators-cards{
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-around;
+}
+
+.creator-img-text{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 56px;
+    padding-left: 29px;
+    width: 600px;
+    height: 156px;
+    background: #302034;
+    box-shadow: 2px 0px 0px 0px #E03054 inset;
+}
+
+.creator-img-text-left{
+    display: flex;
+    align-items: center;
+    padding-right: 6.25rem;
+    border-right: 2px solid #49374E ;
+
+}
+
+.creator-left-side-text{
+    margin-left: 24px;
+}
+
+.left-text-title{
+    color: #F5FBF2;
+    font-family: Oxanium;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 35.452px;
+    letter-spacing: 1.6px;
+}
+
+.left-text-price{
+    color: #BDAAC1;
+    font-family: Work Sans;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 36px;
+}
+
+.items{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 28.5%;
+    justify-content: center;
+}
+
+.quantity{
+    color: #F5FBF2;
+    font-family: Work Sans;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 35.452px;
+}
+
+.item{
+    color: #908294;
+    font-family: Work Sans;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 36px; 
+}
+
+@media screen and (max-width: 600px){
+    .creator-img img{
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+    }
+
+    .creators-cards{
+        display: grid;
+        grid-template-columns: auto;
+        justify-content: space-around;
+    }
+
+    .creator-img-text{
+        padding-left: 16px;
+        width: 343px;
+        height: 102px;
+    }
+    
+    .creator-img-text-left{
+        padding-right: 3.12rem;
+    }
+    
+    .creator-left-side-text{
+        margin-left: 12px;
+    }
+    
+    .left-text-title{
+        font-size: 20px;
+    }
+    
+    .left-text-price{
+        font-size: 14px;
+    }
+    
+    .items{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .quantity{
+        font-size: 24px;
+    }
+    
+    .item{
+        font-size: 16px;
+    }
+}

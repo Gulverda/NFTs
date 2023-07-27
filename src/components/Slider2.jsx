@@ -119,7 +119,7 @@ function Slider() {
                         <div
                             className={`card2 ${isDark && index === 1 ? "dark" : ""}`}
                             key={photo.id}
-                        >
+                        >   
                             <img src={photo.src} className="partner" alt="" />
                             <div className="about-img">
                                 <div className="top-side">
@@ -201,9 +201,6 @@ function Slider() {
                                                     <p className="price">4.89 ETH</p>
                                                 </div>
                                             </div>
-                                            <div className="bid-now-button">
-                                                <button className="bid-button">Place a Bid</button>
-                                            </div>
                                         </div>
                                     </div>
                                 ))}
@@ -217,3 +214,6 @@ function Slider() {
 }
 
 export default Slider;
+
+
+
