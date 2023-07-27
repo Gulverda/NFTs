@@ -69,6 +69,69 @@
     flex-direction: column;
 }
 
+/*------------- card2-before-and-hover --------------*/
+.card2 {
+    position: relative;
+    overflow: hidden;
+    max-width: 450px;
+    height: 550px;
+    background-color: #3D2942;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+}
+  
+.card2 .dark-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.911);
+    z-index: 0;
+    opacity: 0; 
+    transition: opacity 0.3s ease;
+}
+  
+.card2:hover .dark-overlay {
+    opacity: 1; 
+}
+
+  
+.card2:hover .partner {
+    filter: brightness(30%);
+}
+  
+.bid-now-button {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    z-index: 2; 
+    opacity: 0; 
+    transition: opacity 0.3s ease;
+}
+  
+.card2:hover .bid-now-button {
+    opacity: 1; 
+}
+  
+.bid-button {
+    padding: 8px 16px;
+    background: var(--primary-color, #FFCE4E);
+    border: none;
+    width: 246px;
+    height: 70px;
+    color: #000;
+    text-align: center;
+    font-family: Work Sans;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    cursor: pointer;
+}
+
 .top-side{
     display: flex;
     justify-content: space-between;
@@ -285,166 +348,6 @@
     height: 54px;
 }
 
-.circle-and-title{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.circle-and-title p{
-    color: #F5FBF2;
-    font-family: Oxanium;
-    font-size: 64px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 130px; 
-}
-
-.purple-circle{
-    width: 110px;
-    height: 110px;
-    border-radius: 50%;
-    background: #8613A5;
-}
-
-.red-circle{
-    width: 110px;
-    height: 110px;
-    border-radius: 50%;
-    background: #E03054;
-}
-/* Slider.css */
-
-/* ... Your existing styles ... */
-
-/* Modal Styles */
-/* .modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .modal-content {
-    background-color: white;
-    width: 95%;
-    height: 95%;
-    padding: 20px;
-    overflow-y: auto;
-  }
-  
-  .close-button {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background: none;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .all-photos {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    grid-gap: 20px;
-  }
-  
-  .all-photos .card {
-    position: relative;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    overflow: hidden;
-  }
-  
-  .all-photos .card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-  }
-  
-  .all-photos .card .about-img {
-    padding: 10px;
-  }
-  
-  .all-photos .card .top-side {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  
-  .all-photos .card .idt-title,
-  .all-photos .card .idt-description {
-    margin: 0;
-    font-size: 14px;
-    color: #333;
-  }
-  
-  .all-photos .card .favorite {
-    display: flex;
-    align-items: center;
-  }
-  
-  .all-photos .card .icon {
-    font-size: 18px;
-    color: #ff5050;
-    cursor: pointer;
-  }
-  
-  .all-photos .card .fav-number {
-    margin: 0;
-    margin-left: 5px;
-    font-size: 14px;
-    color: #333;
-  }
-  
-  .all-photos .card .bottom-side {
-    margin-top: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .all-photos .card .paragraphs {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .all-photos .card .current-bid,
-  .all-photos .card .price {
-    margin: 0;
-    font-size: 14px;
-    color: #333;
-  }
-  
-  .all-photos .card button {
-    border: 1px solid #FDE8B3;
-    background: rgba(233, 215, 167, 0.10);
-    color: #FFF;
-    font-family: Work Sans;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 35.452px;
-    letter-spacing: 1.2px;
-    height: 80px;
-    margin-top: 28px;
-  }
-  
-  .slider-center {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .button-view-all {
-    margin-top: 20px;
-  }
-   */
-
 @media screen and (max-width: 1348px){
     .card-style{
         display: flex;
@@ -482,6 +385,11 @@
         max-width: 343px;
         height: 300px;
         padding: 24px;
+    }
+
+    .card2{
+        width: 343px;
+        height: 470px;
     }
 
     .partner{
@@ -537,5 +445,12 @@
     .logo1{
         width: 42px;
         height: 42px;
+    }
+
+    .bid-button {
+        border: none;
+        width: 187px;
+        height: 54px;
+        font-size: 20px;
     }
 }

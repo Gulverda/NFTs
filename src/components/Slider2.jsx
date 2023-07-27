@@ -9,42 +9,42 @@ function Slider() {
     const photos = [
         {
             id: 1,
-            src: require("./Navbar/images/card1.png"),
+            src: require("./Navbar/images/3rdcard1.png"),
             title: "Virtual Art",
             description: "by @wzard",
             favorite: false,
         },
         {
             id: 2,
-            src: require("./Navbar/images/card2.png"),
+            src: require("./Navbar/images/3rdcard2.png"),
             title: "Virtual Art",
             description: "by @wzard",
             favorite: false,
         },
         {
             id: 3,
-            src: require("./Navbar/images/card3.png"),
+            src: require("./Navbar/images/3rdcard3.png"),
             title: "Virtual Art",
             description: "by @wzard",
             favorite: false,
         },
         {
             id: 4,
-            src: require("./Navbar/images/card1.png"),
+            src: require("./Navbar/images/3rdcard1.png"),
             title: "Virtual Art",
             description: "by @wzard",
             favorite: false,
         },
         {
             id: 5,
-            src: require("./Navbar/images/card2.png"),
+            src: require("./Navbar/images/3rdcard2.png"),
             title: "Virtual Art",
             description: "by @wzard",
             favorite: false,
         },
         {
             id: 6,
-            src: require("./Navbar/images/card3.png"),
+            src: require("./Navbar/images/3rdcard3.png"),
             title: "Virtual Art",
             description: "by @wzard",
             favorite: false,
@@ -54,18 +54,21 @@ function Slider() {
     const [startIndex, setStartIndex] = useState(0);
     const [isDark, setIsDark] = useState(photos[photos.length - 1].dark);
     const [showModal, setShowModal] = useState(false);
-    const [updatedPhotos, setUpdatedPhotos] = useState(photos);
 
-    const visiblePhotos = updatedPhotos.slice(startIndex, startIndex + 3);
+    // Separate state variables for visible photos and all photos
+    const [visiblePhotos, setVisiblePhotos] = useState(photos.slice(startIndex, startIndex + 3));
+    const [allPhotos, setAllPhotos] = useState(photos);
 
     const nextPhotos = () => {
         setIsDark(false);
         setStartIndex((startIndex + 2) % (photos.length - 2));
+        setVisiblePhotos(allPhotos.slice(startIndex, startIndex + 3));
     };
 
     const prevPhotos = () => {
         setIsDark(true);
         setStartIndex((startIndex - 1 + (photos.length - 1)) % (photos.length - 1));
+        setVisiblePhotos(allPhotos.slice(startIndex, startIndex + 3));
     };
 
     const toggleModal = () => {
@@ -73,8 +76,20 @@ function Slider() {
     };
 
     const toggleFavorite = (photoId) => {
-        setUpdatedPhotos((prevPhotos) => {
+        setAllPhotos((prevPhotos) => {
             return prevPhotos.map((photo) => {
+                if (photo.id === photoId) {
+                    return {
+                        ...photo,
+                        favorite: !photo.favorite,
+                    };
+                }
+                return photo;
+            });
+        });
+
+        setVisiblePhotos((prevVisiblePhotos) => {
+            return prevVisiblePhotos.map((photo) => {
                 if (photo.id === photoId) {
                     return {
                         ...photo,
@@ -101,8 +116,10 @@ function Slider() {
             <div className="slider-center">
                 <div className="card-style">
                     {visiblePhotos.map((photo, index) => (
-                        <div className={`card ${isDark && index === 1 ? "dark" : ""}`} key={photo.id}>
-                            <div className="dark-overlay"></div>
+                        <div
+                            className={`card2 ${isDark && index === 1 ? "dark" : ""}`}
+                            key={photo.id}
+                        >
                             <img src={photo.src} className="partner" alt="" />
                             <div className="about-img">
                                 <div className="top-side">
@@ -131,7 +148,9 @@ function Slider() {
                                         <p className="current-bid">Current Bid</p>
                                         <p className="price">4.89 ETH</p>
                                     </div>
-                                    <button>Place Bid</button>
+                                </div>
+                                <div className="bid-now-button">
+                                    <button className="bid-button">Place a Bid</button>
                                 </div>
                             </div>
                         </div>
@@ -150,9 +169,9 @@ function Slider() {
                                 Close
                             </button>
                             <div className="all-photos">
-                                {updatedPhotos.map((photo) => (
-                                    <div className="card" key={photo.id}>
-                                        <img src={photo.src} alt="" />
+                                {allPhotos.map((photo) => (
+                                    <div className="card2" key={photo.id}>
+                                        <img src={photo.src} className="partner" alt="" />
                                         <div className="about-img">
                                             <div className="top-side">
                                                 <div className="left-side">
@@ -181,7 +200,9 @@ function Slider() {
                                                     <p className="current-bid">Current Bid</p>
                                                     <p className="price">4.89 ETH</p>
                                                 </div>
-                                                <button>Place Bid</button>
+                                            </div>
+                                            <div className="bid-now-button">
+                                                <button className="bid-button">Place a Bid</button>
                                             </div>
                                         </div>
                                     </div>

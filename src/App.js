@@ -4,7 +4,7 @@ import Navbar from './components/Navbar/Navbar';
 import Content from './components/Content';
 import Slider1 from './components/Slider';
 import Slider2 from './components/Slider1';
-// import SecondSlider from './components/Secondslider';
+import Slider3 from './components/Slider2';
 import Footer from './components/Footer'
 
 function App() {
@@ -15,6 +15,7 @@ function App() {
           <Content />
           <Slider1 /> 
           <Slider2 />
+          <Slider3 />
           <Footer />
         </div>
     </div>

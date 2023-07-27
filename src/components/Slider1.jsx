@@ -68,10 +68,6 @@ function Slider() {
 
     return (
         <div className="slider">
-            <div className="circle-and-title">
-                <div className="red-circle"></div>
-                <p className="first-slider-title">Popular Collections</p>
-            </div>
             <div className="first-buttons">
                 <div className="fb-cont">
                     <button className="prev-button" aria-label="Previous Page" onClick={prevPhotos}>
