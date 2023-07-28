@@ -71,6 +71,12 @@ function Slider() {
         setVisiblePhotos(allPhotos.slice(startIndex, startIndex + 3));
     };
 
+    const [isHovered, setIsHovered] = useState(false);
+
+    const handleCardHover = () => {
+        setIsHovered(!isHovered);
+    };
+
     const toggleModal = () => {
         setShowModal(!showModal);
     };
@@ -117,10 +123,15 @@ function Slider() {
                 <div className="card-style">
                     {visiblePhotos.map((photo, index) => (
                         <div
-                            className={`card2 ${isDark && index === 1 ? "dark" : ""}`}
+                            className={`card2 parnters ${isDark && index === 1 ? "dark" : ""}`}
                             key={photo.id}
-                        >   
+                            onMouseEnter={handleCardHover}
+                            onMouseLeave={handleCardHover}
+                        >
                             <img src={photo.src} className="partner" alt="" />
+                            <div className="bid-now-button">
+                                <button className="bid-button">Place a Bid</button>
+                            </div>
                             <div className="about-img">
                                 <div className="top-side">
                                     <div className="left-side">
@@ -149,9 +160,7 @@ function Slider() {
                                         <p className="price">4.89 ETH</p>
                                     </div>
                                 </div>
-                                <div className="bid-now-button">
-                                    <button className="bid-button">Place a Bid</button>
-                                </div>
+
                             </div>
                         </div>
                     ))}
@@ -172,6 +181,9 @@ function Slider() {
                                 {allPhotos.map((photo) => (
                                     <div className="card2" key={photo.id}>
                                         <img src={photo.src} className="partner" alt="" />
+                                        <div className="bid-now-button">
+                                            <button className="bid-button">Place a Bid</button>
+                                        </div>
                                         <div className="about-img">
                                             <div className="top-side">
                                                 <div className="left-side">
