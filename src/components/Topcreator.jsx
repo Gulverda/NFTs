@@ -30,6 +30,14 @@ function Creators() {
   
     return (
       <div className="creators">
+        <div className="center-div">
+                <div className="space-between-div">
+                    <div className="circle red"></div>
+                    <div className="title-for-sliders">
+                        <p className="top-crea">Top Creators</p>
+                    </div>
+                </div>
+            </div>
         <div className="creators-cont">
           <div className="creators-cards">
             {aboutCreators.map((creator) => (

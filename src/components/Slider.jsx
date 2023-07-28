@@ -88,6 +88,14 @@ function Slider() {
 
     return (
         <div className="slider">
+            <div className="center-div">
+                <div className="space-between-div">
+                    <div className="circle"></div>
+                    <div className="title-for-sliders">
+                        <p className="live">Live Auctions</p>
+                    </div>
+                </div>
+            </div>
             <div className="first-buttons">
                 <div className="fb-cont">
                     <button className="prev-button" aria-label="Previous Page" onClick={prevPhotos}>

@@ -78,23 +78,24 @@
     display: flex;
     flex-direction: column;
     transition: brightness 0.3s ease;
+    
 }
 
 .card2 .partner:hover {
-  filter: brightness(30%);
+    filter: brightness(30%);
+  
 }
   
 .bid-now-button{
-    position: relative;
     width: 100%;
-    padding: 134px 0;
     display: flex;
+    padding: 134px 0;
     justify-content: center;
     align-items: center;
     margin-top: -337px;
     opacity: 0;
     background-color: #000000c9;
-
+    position: relative;
 }
 
 .bid-now-button button{
@@ -109,6 +110,7 @@
     line-height: normal;
     border: none;
     cursor: pointer;
+    
 }
   
 .bid-now-button:hover{
@@ -333,6 +335,55 @@
     height: 54px;
 }
 
+/*--------------- Sliders Title ----------------*/
+.center-div{
+    display: flex;
+    justify-content: center;
+}
+  
+.space-between-div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+  
+.title-for-sliders p{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #F5FBF2;
+    font-family: Oxanium;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130px;
+    margin-left: 40px;
+}
+
+
+.title-for-sliders .popular{
+    margin-left: 30px;
+}
+
+.title-for-sliders .Explore{
+    margin-left: 24px;
+}
+  
+  
+.circle{
+    position: absolute;
+    display: flex;
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    background: #8613A5;
+}
+
+.red{
+    background: #E03054;
+}
+
 @media screen and (max-width: 1348px){
     .card-style{
         display: flex;
@@ -417,20 +468,6 @@
         grid-template-columns: auto;
     }
 
-    .circle-and-title p{
-        font-size: 36px;
-    }
-    
-    .purple-circle{
-        width: 84px;
-        height: 84px;
-    }
-
-    .red-circle{
-        width: 84px;
-        height: 84px;
-    }
-
     .logo1{
         width: 42px;
         height: 42px;
@@ -445,5 +482,28 @@
     .bid-now-button{
         padding: 95px 0;
         margin-top: -15.2rem;
+    }
+
+    .title-for-sliders p{
+        font-size: 36px;
+        line-height: normal;
+    }
+
+    .title-for-sliders .popular{
+        margin-left: 14px;
+    }
+
+    .circle{
+        width: 84px;
+        height: 84px;
+    }
+
+    .top{
+        margin-bottom: 50px;
+    }
+
+    .title-for-sliders .Explore{
+        margin-left: 40px;
+        width: 200px;
     }
 }

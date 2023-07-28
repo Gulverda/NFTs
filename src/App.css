@@ -24,3 +24,10 @@ body{
   width: 1600px;
   justify-content: center;
 }
+
+.title-for-sliders {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
