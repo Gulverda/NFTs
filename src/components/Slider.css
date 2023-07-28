@@ -277,6 +277,7 @@
 
 .modal {
     position: fixed;
+    z-index: 1;
     top: 0;
     left: 0;
     width: 100%;
@@ -288,6 +289,7 @@
 }
   
 .modal-content {
+    
     justify-content: center;
     background-color: rgb(12, 1, 12);
     width: 95%;
