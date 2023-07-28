@@ -77,8 +77,43 @@
     padding: 32px;
     display: flex;
     flex-direction: column;
+    transition: brightness 0.3s ease;
+}
+
+.card2 .partner:hover {
+  filter: brightness(30%);
+}
+  
+.bid-now-button{
     position: relative;
-    overflow: hidden;
+    width: 100%;
+    padding: 134px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -337px;
+    opacity: 0;
+    background-color: #000000c9;
+
+}
+
+.bid-now-button button{
+    width: 246px;
+    height: 70px;
+    background: var(--primary-color, #FFCE4E);
+    color: #000;
+    font-family: Work Sans;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    border: none;
+    cursor: pointer;
+}
+  
+.bid-now-button:hover{
+    opacity: 1;
+    transition: all 0.4s ease;
 }
   
 
