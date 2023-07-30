@@ -98,7 +98,6 @@
   background-repeat: no-repeat;
 }
 
-
 .nft-img-text{
   width: 100%;
   height: 142px;
@@ -231,6 +230,15 @@
   .important-text{
     font-size: 75px;
   }
+  
+  .img-right{
+    width: 500px;
+    height: 658px;
+  }
+
+  .upper-side-text{
+    width: 400px;
+  }
 }
 
 @media screen and (max-width: 1350px) {
@@ -240,12 +248,7 @@
   }
 }
 
-@media screen and (max-width: 768px) {
-  .artworks-auctions-creators{
-    margin: 0;
-    padding: 0;
-  }
-
+@media screen and (max-width: 1250px) {
   .left-right{
     display: flex;
     flex-direction: column;
@@ -256,6 +259,12 @@
 
   .important-text{
     font-size: 42px;
+    line-height: normal;
+    text-align: center;
+  }
+
+  .important-text{
+    font-size: 85px;
     line-height: normal;
     text-align: center;
   }
@@ -277,6 +286,33 @@
     font-size: 18px;
     width: 155px;
     height: 54px;
+  }
+
+  .right{
+    margin: 0;
+    margin-top: 50px;
+  }
+  
+  .text-1{
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .artworks-auctions-creators{
+    margin: 0;
+    padding: 0;
+  }
+
+  .important-text{
+    font-size: 42px;
+  }
+
+  .buttons{
+    display: flex;
+    justify-content: space-around;
+    max-width: 330px;
+    margin-top: 56px;
   }
 
   .right{
@@ -404,11 +440,12 @@
   
   .right{
     margin-right: 0;
-    margin-top: -32rem;
+    margin-top: -512px;
   }
   
 }
   
+
 @media (max-width: 480px) {
   .text-1{
     margin: 0;

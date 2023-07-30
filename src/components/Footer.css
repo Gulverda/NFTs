@@ -172,7 +172,7 @@
 
 /*---- Responsive ----*/
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
     .two-side{
         width: auto;
         display: grid;
