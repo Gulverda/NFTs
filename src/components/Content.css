@@ -249,6 +249,10 @@
 }
 
 @media screen and (max-width: 1250px) {
+  .artworks-auctions-creators{
+    justify-content: space-around;
+  }
+  
   .left-right{
     display: flex;
     flex-direction: column;
