@@ -51,7 +51,6 @@ const Content = () => {
                   </div>
                 </div>
                 <div className="img-right">
-                  {/* <img src={Nft} alt="nft" /> */}
                 </div>
                 <div className="nft-img-text">
                   <div className="nit">

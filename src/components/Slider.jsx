@@ -1,8 +1,9 @@
 import React, { useState, useMemo } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { faArrowLeft, faArrowRight, faXmark } from "@fortawesome/free-solid-svg-icons";
 import { faHeart as solidFaHeart } from "@fortawesome/free-solid-svg-icons";
 import { faHeart as regularFaHeart } from "@fortawesome/free-regular-svg-icons";
+
 import aiimg from "./Navbar/images/ai.png";
 
 // Separate modal content into a new component
@@ -24,14 +25,14 @@ function ModalContent({ photos, toggleFavorite }) {
                 </div>
               </div>
               <div className="favorite">
-                <p>
+                <div className="parent-for-p">
                   <FontAwesomeIcon
                     onClick={() => toggleFavorite(photo.id)}
                     icon={photo.favorite ? solidFaHeart : regularFaHeart}
                     className="icon"
                   />
                   <p className="fav-number">92</p>
-                </p>
+                </div>
               </div>
             </div>
             <div className="bottom-side">
@@ -49,52 +50,52 @@ function ModalContent({ photos, toggleFavorite }) {
 }
 
 function Slider() {
-    const photos = [
-        {
-            id: 1,
-            src: require("./Navbar/images/card1.png"),
-            title: "Virtual Art",
-            description: "by @wzard",
-            favorite: false,
-        },
-        {
-            id: 2,
-            src: require("./Navbar/images/card2.png"),
-            title: "Virtual Art",
-            description: "by @wzard",
-            favorite: false,
-        },
-        {
-            id: 3,
-            src: require("./Navbar/images/card3.png"),
-            title: "Virtual Art",
-            description: "by @wzard",
-            favorite: false,
-        },
-        {
-            id: 4,
-            src: require("./Navbar/images/card1.png"),
-            title: "Virtual Art",
-            description: "by @wzard",
-            favorite: false,
-        },
-        {
-            id: 5,
-            src: require("./Navbar/images/card2.png"),
-            title: "Virtual Art",
-            description: "by @wzard",
-            favorite: false,
-        },
-        {
-            id: 6,
-            src: require("./Navbar/images/card3.png"),
-            title: "Virtual Art",
-            description: "by @wzard",
-            favorite: false,
-        },
-    ];
+  const photos = [
+    {
+      id: 1,
+      src: require("./Navbar/images/card1.png"),
+      title: "Virtual Art",
+      description: "by @wzard",
+      favorite: false,
+    },
+    {
+      id: 2,
+      src: require("./Navbar/images/card2.png"),
+      title: "Virtual Art",
+      description: "by @wzard",
+      favorite: false,
+    },
+    {
+      id: 3,
+      src: require("./Navbar/images/card3.png"),
+      title: "Virtual Art",
+      description: "by @wzard",
+      favorite: false,
+    },
+    {
+      id: 4,
+      src: require("./Navbar/images/card1.png"),
+      title: "Virtual Art",
+      description: "by @wzard",
+      favorite: false,
+    },
+    {
+      id: 5,
+      src: require("./Navbar/images/card2.png"),
+      title: "Virtual Art",
+      description: "by @wzard",
+      favorite: false,
+    },
+    {
+      id: 6,
+      src: require("./Navbar/images/card3.png"),
+      title: "Virtual Art",
+      description: "by @wzard",
+      favorite: false,
+    },
+  ];
 
-    const [startIndex, setStartIndex] = useState(0);
+  const [startIndex, setStartIndex] = useState(0);
   const [showModal, setShowModal] = useState(false);
   const [updatedPhotos, setUpdatedPhotos] = useState(photos);
 
@@ -152,10 +153,7 @@ function Slider() {
       <div className="slider-center">
         <div className="card-style">
           {visiblePhotos.map((photo, index) => (
-            <div
-              className={`card ${index === 1 ? "dark" : ""}`}
-              key={photo.id}
-            >
+              <div className={`card ${index === 1 ? "dark" : ""}`} key={photo.id}>
               <div className="dark-overlay"></div>
               <img src={photo.src} className="partner" alt="" />
               <div className="about-img">
@@ -170,14 +168,14 @@ function Slider() {
                     </div>
                   </div>
                   <div className="favorite">
-                    <p>
-                      <FontAwesomeIcon
-                        onClick={() => toggleFavorite(photo.id)}
-                        icon={photo.favorite ? solidFaHeart : regularFaHeart}
-                        className="icon"
-                      />
-                      <p className="fav-number">92</p>
-                    </p>
+                    <div className="parent-for-p">
+                  <FontAwesomeIcon
+                    onClick={() => toggleFavorite(photo.id)}
+                    icon={photo.favorite ? solidFaHeart : regularFaHeart}
+                    className="icon"
+                  />
+                  <p className="fav-number">92</p>
+                </div>
                   </div>
                 </div>
                 <div className="bottom-side">
@@ -201,7 +199,7 @@ function Slider() {
           <div className="modal">
             <div className="modal-content">
               <button className="close-button" onClick={toggleModal}>
-                Close
+                <FontAwesomeIcon icon={faXmark} />
               </button>
               <ModalContent photos={updatedPhotos} toggleFavorite={toggleFavorite} />
             </div>

@@ -144,6 +144,13 @@
   font-weight: 700;
   line-height: normal;
   margin-right: 39px;
+  cursor: pointer;
+}
+
+.start-bid:hover{
+  background: #16091B;
+  color: #FFCE4E;
+  transition: all 0.2s ease;
 }
 
 .upper-side{

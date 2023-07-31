@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowRight, faArrowLeft, faHeart as solidFaHeart } from "@fortawesome/free-solid-svg-icons";
+import { faArrowRight, faArrowLeft, faXmark, faHeart as solidFaHeart } from "@fortawesome/free-solid-svg-icons";
 import { faHeart as regularFaHeart } from "@fortawesome/free-regular-svg-icons";
 import "./Slider.css";
 import aiimg from './Navbar/images/ai3.png'
@@ -152,14 +152,14 @@ function Slider() {
                                         </div>
                                     </div>
                                     <div className="favorite">
-                                        <p>
-                                            <FontAwesomeIcon
-                                                onClick={() => toggleFavorite(photo.id)}
-                                                icon={photo.favorite ? solidFaHeart : regularFaHeart}
-                                                className="icon"
-                                            />
-                                            <p className="fav-number">92</p>
-                                        </p>
+                                    <div className="parent-for-p">
+                  <FontAwesomeIcon
+                    onClick={() => toggleFavorite(photo.id)}
+                    icon={photo.favorite ? solidFaHeart : regularFaHeart}
+                    className="icon"
+                  />
+                  <p className="fav-number">92</p>
+                </div>
                                     </div>
                                 </div>
                                 <div className="bottom-side">
@@ -183,7 +183,7 @@ function Slider() {
                     <div className="modal">
                         <div className="modal-content">
                             <button className="close-button" onClick={toggleModal}>
-                                Close
+                                <FontAwesomeIcon icon={faXmark} />
                             </button>
                             <div className="all-photos">
                                 {allPhotos.map((photo) => (
@@ -205,14 +205,14 @@ function Slider() {
                                                     </div>
                                                 </div>
                                                 <div className="favorite">
-                                                    <p>
-                                                        <FontAwesomeIcon
-                                                            onClick={() => toggleFavorite(photo.id)}
-                                                            icon={photo.favorite ? solidFaHeart : regularFaHeart}
-                                                            className="icon"
-                                                        />
-                                                        <p className="fav-number">92</p>
-                                                    </p>
+                                                <div className="parent-for-p">
+                  <FontAwesomeIcon
+                    onClick={() => toggleFavorite(photo.id)}
+                    icon={photo.favorite ? solidFaHeart : regularFaHeart}
+                    className="icon"
+                  />
+                  <p className="fav-number">92</p>
+                </div>
                                                 </div>
                                             </div>
                                             <div className="bottom-side">
