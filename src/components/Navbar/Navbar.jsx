@@ -3,7 +3,6 @@ import MenuItems from "./Menuitems";
 import './Navbar.css'
 import './Button.css'
 import Logo from './images/logo.png';
-// import { Button } from "./Button.jsx"
 
 class Navbar extends Component {
     state = { clicked: false }
@@ -11,7 +10,6 @@ class Navbar extends Component {
     handleClick = () => {
         this.setState({ clicked: !this.state.clicked })
     }
-
 
     render() {
         return (
@@ -24,7 +22,7 @@ class Navbar extends Component {
                 </div>
                 <ul className={this.state.clicked ? 'nav-menu active' : 'nav-menu'}>
                     {MenuItems.map((item, index) => (
-                        <li key={index}>
+                        <li key={item.title}>
                             <button className={item.cName}>{item.title}</button>
                         </li>
                     ))}
@@ -35,3 +33,4 @@ class Navbar extends Component {
 }
 
 export default Navbar;
+

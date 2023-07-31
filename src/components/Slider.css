@@ -289,30 +289,26 @@
 }
   
 .modal-content {
-    
     justify-content: center;
     background-color: rgb(12, 1, 12);
     width: 95%;
     height: 95%;
-    padding: 20px;
+    padding: 50px;
     overflow-y: auto;
 }
   
 .close-button {
     position: absolute;
-    top: 10px;
-    right: 10px;
-    background: none;
-    border: 1px solid #FFCE4E;
-    padding: 10px 20px;
+    top: 45px;
+    right: 100px;
+    font-size: 32px;
+    z-index: 1;
     cursor: pointer;
     color: #FFCE4E;
-    font-family: Work Sans;
-    font-style: normal;
-    font-weight: 400;
-    margin-top: 40px;
-    margin-right: 100px;
+    background: none;
+    border: none;
 }
+  
   
 .all-photos {
     display: grid;
@@ -406,7 +402,30 @@
         flex-wrap: wrap;
         justify-content: center;
     }
+
+    .close-button{
+        top: 3%;
+        right: 10%;
+    }
 }
+
+@media screen and (max-width: 768px){
+    .center-div{
+        margin-bottom: 50px;
+    }
+
+    .title-for-sliders p{
+        font-size: 36px;
+        line-height: normal;
+       
+    }
+    
+    .circle{
+        width: 84px;
+        height: 84px;
+    }
+}
+
 
 @media screen and (max-width: 480px){
     .fb-cont{
@@ -418,7 +437,7 @@
     }
 
     .card{
-        max-width: 343px;
+        min-width: 300px;
         height: 560px;
         padding: 24px;
     }
@@ -486,18 +505,8 @@
         margin-top: -15.2rem;
     }
 
-    .title-for-sliders p{
-        font-size: 36px;
-        line-height: normal;
-    }
-
     .title-for-sliders .popular{
         margin-left: 14px;
-    }
-
-    .circle{
-        width: 84px;
-        height: 84px;
     }
 
     .top{

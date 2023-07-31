@@ -143,13 +143,18 @@
     line-height: 35.452px; /* 147.717% */
 }
 
-.footer-1 li{
+.footer-1 li a{
     color: #96839B;
     font-family: Work Sans;
     font-size: 20px;
     font-style: normal;
     font-weight: 500;
     line-height: 50.5px; /* 252.5% */
+}
+
+.footer-1 li a:hover{
+    color: var(--primary);
+    transition: all 0.2s ease-in;
 }
 
 .copyright{
@@ -159,6 +164,8 @@
     font-style: normal;
     font-weight: 400;
     line-height: 36px;
+    margin-top: 5rem;
+    text-align: center;
 }
 
 .p-socials{
@@ -222,8 +229,9 @@
     }
 
     .right1{
-        justify-content: center;
+        justify-content: space-around;
         text-align: center;
         margin-right: 0;
+        min-width: 100%;
     }
 }

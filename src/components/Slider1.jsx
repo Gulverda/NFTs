@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowRight, faArrowLeft } from "@fortawesome/free-solid-svg-icons";
+import { faArrowRight, faArrowLeft, faXmark } from "@fortawesome/free-solid-svg-icons";
 import "./Slider.css";
 import aiimg from './Navbar/images/ai2.png'
 
@@ -54,7 +54,7 @@ function Slider() {
 
     const nextPhotos = () => {
         setIsDark(false);
-        setStartIndex((startIndex + 2) % (photos.length - 2));
+        setStartIndex((startIndex + 1) % (photos.length - 2));
     };
 
     const prevPhotos = () => {
@@ -89,10 +89,7 @@ function Slider() {
             <div className="slider-center">
                 <div className="card-style">
                     {visiblePhotos.map((photo, index) => (
-                        <div
-                            className={`card1 ${isDark && index === 1 ? "dark" : ""}`}
-                            key={photo.id}
-                        >
+                        <div className={`card1 ${isDark && index === 1 ? "dark" : ""}`} key={photo.id}>
                             <img src={photo.src} className="partner" alt="" />
                             <div className="about-img">
                                 <div className="top-side">
@@ -120,7 +117,7 @@ function Slider() {
                     <div className="modal">
                         <div className="modal-content">
                             <button className="close-button" onClick={toggleModal}>
-                                Close
+                            <FontAwesomeIcon icon={faXmark} />
                             </button>
                             <div className="all-photos">
                                 {photos.map((photo) => (
