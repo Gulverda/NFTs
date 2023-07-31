@@ -11,7 +11,7 @@ function Footer() {
         <div className='onpattern'>
           <p className='pattern-title'>Ready for Next NFT Drop?</p>
           <form action='' className='input'>
-            <input type='text' placeholder='info@gmail.com'></input>
+            <input type='email' placeholder='info@gmail.com' required></input>
             <button type='submit' value='submit'>Subscribe</button>
           </form>
         </div>
