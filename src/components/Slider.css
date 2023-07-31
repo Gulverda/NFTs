@@ -176,7 +176,7 @@
     cursor: pointer;
 }
 
-.favorite p{
+.favorite .parent-for-p{
     display: flex;
     align-items: center;
     color: #76607A;
